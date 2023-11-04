@@ -1,0 +1,26 @@
+
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+  html body {
+    background-color:blanchedalmond;
+}
+
+
+</style>
+
+<div>
+    <h1 style="margin-left: 580px;color:red;margin-top: 20px;text-decoration: underline;">Predicted Disease</h1>
+</div>
+
+<div style="border-style: solid; width: 1000px; margin-left: 200px; margin-top: 20px; margin-bottom: 30px;">
+  <div>
+      <div>
+          <div class="card card-body" style="justify-content: left; background-color:blanchedalmond">
+            <p class="text-center" style="color: black; font-size: 22px;">{{ prediction }}</p>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

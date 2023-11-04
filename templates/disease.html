@@ -1,0 +1,67 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<style>
+  html body {
+    background-color:  #ffe6cc;
+  }
+</style>
+<br /><br />
+
+
+<div  style="border-style:solid; width: 1000px; height: 600px;margin-left: 220px; 
+             margin-bottom: 20px;">
+  <h2 style="text-align: center; margin-top: 20px; color: black; text-decoration: underline;">
+    <b>Inference Pipeline</b>
+  </h2>
+  <br />
+  <br>
+
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    <label for="cars" style="font-weight: bold; font-size: 20px">Choose an Input Source</label> <br/>
+    <select name="cars" id="cars" style="width: 300px;height:30px; border-radius: 10px;">
+    <option value="volvo"> API End Point</option>
+    <option value="saab">Amazon Kinesis</option>
+    <option value="opel"></option>
+    <option value="audi">Audi</option>
+  </select>
+    <br><br>
+    <label for="cars" style="font-weight: bold; font-size: 20px">Enter Source Url</label> <br/>
+
+    <input type="text" style="width: 300px;height:30px; border-radius: 10px;"> </br></br>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Infer the Model </button>
+
+
+  </form>
+</div>
+
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+</div>
+{% endblock %}
